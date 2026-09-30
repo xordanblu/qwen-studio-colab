@@ -8,7 +8,9 @@ Una app para crear y editar imágenes con **Qwen-Image-2.1 original**, dentro de
 2. Pulsa **▶️ Abrir Qwen Studio** y acepta la ejecución del notebook si Colab lo solicita.
 3. Espera la instalación, descarga y carga del modelo. La app aparece en la salida del notebook, lista para escribir tu prompt, elegir calidad y generar.
 
-**Necesitas acceso a A100 + Alta capacidad de RAM y unidades de cómputo en tu Colab.** El notebook incluye esa configuración; la asignación depende de tu cuenta y la disponibilidad de Google. La primera preparación descarga aproximadamente 33 GB. No necesitas instalar nada en tu computadora.
+**Selecciona GPU T4, L4 o A100 en Colab.** El notebook propone **T4 con RAM estándar** y adapta la carga a la memoria disponible. Necesita al menos 14 GiB de VRAM, 10 GiB de RAM del sistema y 55 GiB libres para la instalación inicial. La asignación de GPU depende de tu cuenta y de la disponibilidad de Google. La primera preparación descarga aproximadamente 33 GB. No necesitas instalar nada en tu computadora.
+
+Usa los pesos oficiales completos, **sin cuantización de 4 u 8 bits**. En T4 calcula en FP16 y lee capas desde el disco; con BF16 nativo mantiene BF16. Una T4 tarda más que una A100. La disponibilidad de una sesión gratuita o de unidades de cómputo corresponde a tu cuenta de Colab.
 
 La ejecución usa tu propio entorno y tus recursos de Colab. Este repositorio distribuye el programa; no conecta con un entorno de otra persona. Si quieres conservar una copia editable, utiliza **Archivo → Guardar una copia en Drive**.
 
